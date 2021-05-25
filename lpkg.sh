@@ -28,5 +28,10 @@ git clone $git_url lpkg_pkg_dl2
 mv lpkg_pkg_dl2 "/tmp/PKG_SOURCE"
 echo "Source is available at /tmp/PKG_SOURCE."
 ;;
+'-U')
+rm -f /usr/local/bin/$2
+rm -f /usr/bin/$2
+rm -f /bin/$2
+;;
 esac
 rm -rf /var/tmp/lpkg_pkg_*
