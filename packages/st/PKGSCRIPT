@@ -1,0 +1,6 @@
+git_url='https://git.suckless.org/st'
+
+build() {
+make
+make install
+}
