@@ -29,4 +29,4 @@ mv lpkg_pkg_dl2 "/tmp/PKG_SOURCE"
 echo "Source is available at /tmp/PKG_SOURCE."
 ;;
 esac
-rm -rf /var/tmp/lpkg_pkg_{src,bld,fnd,chk,dnl}
+rm -rf /var/tmp/lpkg_pkg_*
