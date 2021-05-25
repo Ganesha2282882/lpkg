@@ -1,4 +1,4 @@
-git_url='https://github.com/Ganesha2282882/blang.git'
+git_url='https://github.com/blang-pl/blang.git'
 
 build() {
 chmod +x build1
