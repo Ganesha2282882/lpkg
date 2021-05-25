@@ -1,7 +1,0 @@
-git_url='https://github.com/python/cpython.git'
-
-build() {
-./configure
-make
-make install
-}
