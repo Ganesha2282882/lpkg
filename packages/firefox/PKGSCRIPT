@@ -12,7 +12,7 @@ cat > /usr/local/bin/firefox <<EOF
 pushd /var/tmp
 wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" -O firefox.tar.bz2
 tar -xvpf firefox.tar.bz2
-chmod +x /var/tmp/firefox/firefox
+chmod 777 /var/tmp/firefox --recursive
 popd
 /var/tmp/firefox/firefox
 rm -rf /var/tmp/firefox
