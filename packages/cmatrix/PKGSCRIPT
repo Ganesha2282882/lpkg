@@ -1,7 +1,0 @@
-git_url='https://github.com/abishekvashok/cmatrix.git'
-
-build() {
-./configure
-make
-make install
-}
