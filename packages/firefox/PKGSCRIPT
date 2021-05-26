@@ -12,6 +12,7 @@ cd ff
 git checkout tags/esr
 wget -O ait https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
 chmod +x ait
+./ait .
 mv Firefox-*.AppImage /usr/local/bin/firefox
 cat > /usr/share/applications/firefox.desktop <<EOF
 [Desktop Entry]
