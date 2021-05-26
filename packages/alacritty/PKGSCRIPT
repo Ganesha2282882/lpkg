@@ -1,0 +1,19 @@
+git_url='https://github.com/alacritty/alacritty.git'
+
+build() {
+cargo build --release
+sudo install -D target/release/alacritty -t /usr/bin
+
+sudo install -D extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+
+sudo install -D extra/linux/Alacritty.desktop -t /usr/share/applications
+
+sudo install -D extra/completions/alacritty.bash -t /usr/share/bash-completion/completions
+sudo install -D extra/completions/alacritty.fish -t /usr/share/fish/completions
+sudo install -D extra/completions/_alacritty -t /usr/share/zsh/vendor-completions
+
+sudo mkdir -p /usr/local/share/man/man1
+gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz >/dev/null
+
+sudo install -D alacritty.yml -t /usr/doc/share/alacritty
+}
