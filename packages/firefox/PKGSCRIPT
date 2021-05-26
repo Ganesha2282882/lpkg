@@ -6,6 +6,7 @@ build() {
 cuser=`logname | head -n 1`
 wget -O firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US'
 tar -xvpf firefox.tar.bz2
+mkdir /root/.mozilla
 ln -sf /home/$cuser/.mozilla /root
 env DISPLAY=:0 firefox/firefox
 rm /root/.mozilla
