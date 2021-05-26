@@ -8,6 +8,6 @@ wget -O firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-latest-ss
 tar -xvpf firefox.tar.bz2
 mkdir /home/$cuser/.mozilla
 ln -sf /home/$cuser/.mozilla /root
-DISPLAY=:0 firefox/firefox
+DISPLAY=:0 XAUTHORITY=/dev/null firefox/firefox
 rm /root/.mozilla
 }
