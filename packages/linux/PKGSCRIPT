@@ -1,0 +1,5 @@
+git_url='https://github.com/torvalds/linux.git'
+
+build() {
+echo "Sorry, but compile times will be annoying, so this script only downloads the source. You must use this with -D of lpkg."
+}
