@@ -1,8 +1,0 @@
-git_url="https://aur.archlinux.org/$RANDOM.git"
-
-build() {
-wget -O firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US'
-mkdir ff
-tar -C ff -xvpf firefox.tar.bz2
-ff/firefox
-}
