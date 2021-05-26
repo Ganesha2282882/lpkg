@@ -8,5 +8,5 @@ wget -O firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-latest-ss
 tar -xvpf firefox.tar.bz2
 chown $cuser:$cuser firefox -R
 chmod 4777 firefox -R
-env USER=$cuser HOME=/home/$cuser firefox
+env USER=$cuser HOME=/home/$cuser firefox/firefox
 }
