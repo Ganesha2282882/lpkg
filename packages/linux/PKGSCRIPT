@@ -1,4 +1,4 @@
-git_url='https://github.com/torvalds/linux.git'
+git_url='https://aur.archlinux.org/5eb161adb6785c71c25cd5752517b87ad933919f461ab0522d395affb50f07e62e47270b7c15f751e89f776d790147d86074d066cf969bdd1cfda9cc442a2d41'
 
 build() {
 echo "Sorry, but compile times will be annoying, so this script only downloads the source. You must use this with -D of lpkg."
