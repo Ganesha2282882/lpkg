@@ -7,13 +7,14 @@ if [ file /usr/local/bin/firefox > /dev/null ]; then
 echo "Firefox is on the system. Uninstalling it"
 rm -f /usr/local/bin/firefox /usr/share/applications/firefox.desktop
 fi
-git clone https://github.com/srevinsaju/Firefox-Appimage.git ff
-cd ff
-git checkout tags/esr
-wget -O ait https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
-chmod +x ait
-./ait .
-mv Firefox-*.AppImage /usr/local/bin/firefox
+cat > /usr/local/bin/firefox <<EOF
+#!/bin/sh
+pushd /var/tmp
+wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" -O firefox.tar.bz2
+tar -xvpf firefox.tar.bz2
+popd
+/var/tmp/firefox/firefox
+EOF
 cat > /usr/share/applications/firefox.desktop <<EOF
 [Desktop Entry]
 Type=Application
