@@ -1,0 +1,8 @@
+git_url='https://github.com/htop-dev/htop.git'
+
+build() {
+./autogen.sh
+./configure
+make
+make install
+}
