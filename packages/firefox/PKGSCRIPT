@@ -3,7 +3,7 @@
 git_url="https://aur.archlinux.org/$RANDOM.git"
 
 build() {
-if file /usr/local/bin/firefox > /dev/null; then
+if [ -f /usr/local/bin/firefox ]; then
 echo "Firefox is on the system. Uninstalling it"
 rm -f /usr/local/bin/firefox /usr/share/applications/firefox.desktop
 fi
