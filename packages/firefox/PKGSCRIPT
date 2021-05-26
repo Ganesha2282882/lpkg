@@ -1,0 +1,26 @@
+# When uninstalling the package, try to install it again. It will let you uninstall it.
+
+git_url="https://aur.archlinux.org/$RANDOM.git"
+
+build() {
+if [ file /usr/local/bin/firefox > /dev/null ]; then
+echo "Firefox is on the system. Uninstalling it"
+rm -f /usr/local/bin/firefox /usr/share/applications/firefox.desktop
+fi
+git clone https://github.com/srevinsaju/Firefox-Appimage.git ff
+cd ff
+git checkout tags/esr
+wget -O ait https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+chmod +x ait
+mv Firefox-*.AppImage /usr/local/bin/firefox
+cat > /usr/share/applications/firefox.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Firefox
+Comment=Browse the internet freely.
+Exec=firefox
+Icon=firefox
+Terminal=False
+EOF
+}
