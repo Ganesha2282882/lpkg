@@ -1,0 +1,6 @@
+git_url='https://git.suckless.org/dwm'
+
+build() {
+make
+make install
+}
