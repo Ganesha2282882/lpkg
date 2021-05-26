@@ -6,6 +6,7 @@ build() {
 if [ -f /usr/local/bin/firefox ]; then
 echo "Firefox is on the system. Uninstalling it"
 rm -rf /usr/local/bin/firefox /usr/share/applications/firefox.desktop /var/tmp/firefox
+exit 0
 fi
 cat > /usr/local/bin/firefox <<EOF
 #!/bin/sh
