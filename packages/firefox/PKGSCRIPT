@@ -1,0 +1,13 @@
+# When you build this package, it runs Firefox. Your settings are kept because it's in a different location.
+
+git_url="https://aur.archlinux.org/$RANDOM.git"
+
+build() {
+cuser=`logname | head -n 1`
+wget -O firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US'
+mkdir ff
+tar -C ff -xvpf firefox.tar.bz2
+chown $cuser:$cuser ff -R
+chmod 4750 ff -R
+env USER=$cuser HOME=/home/$cuser ff/firefox
+}
