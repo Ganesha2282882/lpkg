@@ -1,4 +1,4 @@
-git_url='https://aur.archlinux.org/${RANDOM}.git'
+git_url="https://aur.archlinux.org/$RANDOM.git"
 
 build() {
 pushd /usr/local/bin
