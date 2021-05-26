@@ -5,6 +5,9 @@ cp main.blang /opt/minilog.blang
 chmod +x /opt/minilog.blang
 cat > /usr/local/bin/minilog <<EOF
 #!/bin/sh
-/opt/minilog.blang
+blang /opt/minilog.blang
 EOF
+
+echo Depends on:
+echo blang
 }
