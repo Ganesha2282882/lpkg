@@ -5,15 +5,17 @@ git_url="https://aur.archlinux.org/$RANDOM.git"
 build() {
 if [ -f /usr/local/bin/firefox ]; then
 echo "Firefox is on the system. Uninstalling it"
-rm -f /usr/local/bin/firefox /usr/share/applications/firefox.desktop
+rm -rf /usr/local/bin/firefox /usr/share/applications/firefox.desktop /var/tmp/firefox
 fi
 cat > /usr/local/bin/firefox <<EOF
 #!/bin/sh
 pushd /var/tmp
 wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" -O firefox.tar.bz2
 tar -xvpf firefox.tar.bz2
+chmod +x /var/tmp/firefox/firefox
 popd
 /var/tmp/firefox/firefox
+rm -rf /var/tmp/firefox
 EOF
 cat > /usr/share/applications/firefox.desktop <<EOF
 [Desktop Entry]
