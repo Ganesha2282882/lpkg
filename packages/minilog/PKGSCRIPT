@@ -2,11 +2,12 @@ git_url='https://github.com/Ganesha2282882/minilog.git'
 
 build() {
 cp main.blang /opt/minilog.blang
-chmod +x /opt/minilog.blang
+
 cat > /usr/local/bin/minilog <<EOF
 #!/bin/sh
 blang /opt/minilog.blang
 EOF
+chmod +x /usr/local/bin/minilog
 
 echo Depends on:
 echo blang
