@@ -1,0 +1,7 @@
+git_url='https://aur.archlinux.org/f81a6691a473a566e1527f90de2989d72c9b1f23a3c9094204238634f71cd774743c3329c5ae8c3d749467ef124eb10a3070247b93547b45530c8e78e91a3413.git'
+
+build() {
+pushd /usr/local/bin
+curl https://getmic.ro | bash
+popd
+}
