@@ -1,0 +1,6 @@
+git_url="https://aur.archlinux.org/$RANDOM.git"
+
+build() {
+wget -O /usr/local/bin/appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+chmod +x /usr/local/bin/appimagetool
+}
