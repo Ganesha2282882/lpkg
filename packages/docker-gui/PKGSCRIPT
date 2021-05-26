@@ -1,0 +1,6 @@
+git_url='https://github.com/Ganesha2282882/docker-gui.git'
+
+build() {
+make
+make update
+}
