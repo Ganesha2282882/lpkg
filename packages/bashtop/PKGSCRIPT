@@ -1,0 +1,5 @@
+git_url='https://github.com/aristocratos/bashtop.git'
+
+build() {
+make install
+}
