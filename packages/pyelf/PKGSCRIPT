@@ -1,0 +1,9 @@
+git_url='https://github.com/Ganesha2282882/pyelf.git'
+
+build() {
+cp pyelf.sh /usr/local/bin/pyelf
+chmod 755 /usr/local/bin/pyelf
+chown root:root /usr/local/bin/pyelf
+echo DEPENDS
+echo appimagetool libpercent
+}
