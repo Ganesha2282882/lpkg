@@ -1,5 +1,7 @@
 git_url='https://github.com/Ganesha2282882/libpercent.git'
 
 build() {
-install -DT /usr/local/bin/libpercent libpercent.sh
+cp libpercent.sh /usr/local/bin/libpercent
+chmod 755 /usr/local/bin/libpercent
+chown root:root /usr/local/bin/libpercent
 }
