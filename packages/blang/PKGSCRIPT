@@ -5,4 +5,6 @@ chmod +x build1
 ./build1
 cp blang /usr/local/bin/blang
 chmod +x /usr/local/bin/blang
+cp bmit /usr/local/bin/bmit
+chmod +x /usr/local/bin/bmit
 }
