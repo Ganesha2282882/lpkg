@@ -7,4 +7,6 @@ cp blang /usr/local/bin/blang
 chmod +x /usr/local/bin/blang
 cp bmit /usr/local/bin/bmit
 chmod +x /usr/local/bin/bmit
+cp brepl /usr/local/bin/brepl
+chmod +x /usr/local/bin/brepl
 }
